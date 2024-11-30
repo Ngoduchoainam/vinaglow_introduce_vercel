@@ -1,0 +1,128 @@
+.mainContent-contact {
+    background-image: url('../../MockupData/Image/contact1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    margin-top: 4%;
+
+    @media (max-width: 767px) {
+        margin-top: 20%;
+        padding-top: 0%;
+    }
+}
+
+.contact-content-container {
+    height: 220px;
+
+    @media (max-width: 767px) {
+        margin-top: 5%;
+        text-align: center;
+    }
+}
+
+.custom-line-rec {
+    width: 90%;
+    /* Chiều rộng đường kẻ ngang */
+    height: 2px;
+    /* Độ dày của đường kẻ */
+    background-color: #245a5c;
+}
+
+.contact-input-container {
+    height: 20%;
+    margin-top: 4%;
+}
+
+.contact-input {
+    background-color: #e8e1ce;
+    border-radius: 20px;
+    border: none;
+    margin-top: 2%;
+    height: 100%;
+    width: 90%;
+}
+
+.contact-input-area {
+    background-color: #e8e1ce;
+    border-radius: 20px;
+    border: none;
+    margin-top: 2%;
+    height: 200%;
+    width: 90%;
+}
+
+.contact-input-area::placeholder {
+    color: #245a5c;
+    padding-left: 10%;
+    position: absolute;
+    top: 10%;
+    /* Đưa placeholder lên trên */
+    padding-left: 10%;
+    /* Điều chỉnh vị trí của placeholder */
+}
+
+.contact-input::placeholder {
+    color: #245a5c;
+    padding-left: 10%;
+}
+
+.contac-container-0 {
+    color: #245a5c;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 2%;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        width: 70%;
+    }
+}
+
+.contac-container-1 {
+    color: #245a5c;
+    font-size: 18px;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.left-contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10%;
+}
+
+.right-contact-container {
+    height: 100%;
+
+    @media (max-width: 767px) {
+        margin-top: 20%;
+        height: 90%;
+        width: 90%;
+    }
+}
+
+.button-contact {
+    margin-top: 17%;
+    text-align: center;
+}
+
+.send-contact-button {
+    border-radius: 30px;
+    background-color: #f0b734;
+    border: none;
+    color: #245a5c;
+    font-weight: bold;
+    width: 35%;
+
+    &:hover {
+        background-color: #245a5c;
+        color: white;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        font-size: 18px;
+        width: 40%;
+    }
+}

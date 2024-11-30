@@ -1,0 +1,214 @@
+.mainContent-recuiment {
+    background-image: url('../../MockupData/Image/aboutUs1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    margin-top: 4%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: 8%;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 0%;
+        margin-top: 20%;
+    }
+}
+
+.bottomMainSlide-recuiment {
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(179, 173, 161, 0.85);
+    color: #245a5c;
+    margin: 0 auto;
+    width: 15%;
+    padding: 1% 0% 1% 0%;
+    margin-top: 10%;
+
+    @media (max-width: 767px) {
+        font-size: 10px;
+        width: 35%;
+    }
+}
+
+.rec-image {
+    width: 100%;
+}
+
+.rec-image-head {
+    width: 90%;
+}
+
+.medium-rec-left {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.left-rec-medium-container {
+    background-color: #245a5c;
+    color: white;
+    border-radius: 20px;
+    padding-top: 7%;
+    padding-left: 6%;
+    padding-bottom: 7%;
+    padding-right: 10%;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        padding-right: 8%;
+    }
+}
+
+.left-rec-medium-container-2 {
+    margin-top: 7%;
+}
+
+.check-rec {
+    color: #f0b734;
+    font-size: 30px;
+    margin-right: 3%;
+}
+
+.check-container {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.rec-head-bottom-title {
+    font-style: italic;
+    margin-top: 4%;
+}
+
+.rec-head-bottom-title span {
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.title-rec {
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 3%;
+    padding-bottom: 5%;
+
+    @media (max-width: 767px) {
+        font-size: 12px;
+    }
+}
+
+.recruiment-fight-head-container {
+    padding-left: 7%;
+
+    @media (max-width: 767px) {
+        margin-top: 5%;
+    }
+}
+
+.recruiment-fight-head-title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 2%;
+    margin-top: 1%;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.remuneration-regime {
+    margin-top: 4%;
+}
+
+.recruitment-process {
+    margin-top: 4%;
+}
+
+.recruitment-process-content {
+    margin-top: 3%;
+}
+
+.recruitment-process-content span {
+    font-weight: bold;
+}
+
+.recruiment-head-title {
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 60%;
+    }
+
+    @media (max-width: 767px) {
+        width: 80%;
+    }
+}
+
+.recruiment-head-title span {
+    @media (max-width: 767px) {
+        font-size: 17px;
+    }
+}
+
+.recruiment-image-head-container {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 767px) {
+        max-width: 33%;
+    }
+}
+
+.bottom-recruiment-container {
+
+
+    @media (max-width: 767px) {
+        max-width: 33%;
+    }
+}
+
+.rec-image {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.recruiment-special-content {
+    margin-top: 6%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        padding-right: 10%;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 15px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-rec-medium-container-frame {
+    opacity: 0;
+}
+
+.left-rec-medium-container-frame.visible {
+    opacity: 1;
+    /* Hiển thị */
+    transform: translateY(0);
+    animation: slideIn 1s ease-out;
+}

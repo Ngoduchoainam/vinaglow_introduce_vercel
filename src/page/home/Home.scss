@@ -1,0 +1,597 @@
+.text-md-right {
+    padding: 0;
+}
+
+.header-top {
+    background-color: #f8f9fa;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10%;
+    width: 80%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        padding-left: 0% !important;
+        width: 100% !important
+    }
+}
+
+.header-nav a {
+    color: #3f6e71;
+    font-size: 15px;
+    border-radius: 20px;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        font-size: 13px;
+    }
+
+    &:hover {
+        background-color: #d6dee6;
+    }
+}
+
+.header-nav .form-inline {
+    display: inline-block;
+}
+
+.mainContent {
+    background-image: url('../../MockupData/Image/homeMainSlide.png');
+    height: 100%;
+    margin-top: 4%;
+    padding-top: 8%;
+    padding-bottom: 10%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        padding-top: 18%;
+    }
+
+    @media (max-width: 767px) {
+        background-size: contain;
+        padding-top: 30%;
+    }
+}
+
+.logo {
+    text-align: center;
+}
+
+.navLinkHome {
+    &:hover {
+        color: #3f6e71;
+    }
+}
+
+.readMoreButton {
+    background-color: #f0c65e;
+    border-radius: 15px;
+    border: none;
+    color: #245a5c;
+    font-weight: bold;
+    width: 12%;
+
+    &:hover {
+        background-color: #245a5c;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 15%;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 10px;
+        width: 25%;
+    }
+}
+
+.homeMainSlideText {
+    width: 33%;
+
+    @media (max-width: 767px) {
+        align-items: center;
+    }
+}
+
+.homeMainSlideText span {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+        font-size: 10px;
+    }
+}
+
+.homeMainSlideText img {
+    margin-right: 2%;
+}
+
+.frame2 {
+    border-left: solid white 2px;
+    border-right: solid white 2px;
+}
+
+.frame1,
+.frame2,
+.frame3 {
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.bottomMainSlide {
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: rgba(52, 102, 102, 0.5);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 65%;
+    padding: 1.5% 0% 1.5% 0%;
+    margin-top: 10%;
+}
+
+.display-4 {
+    color: #245a5c;
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.lead {
+    color: #245a5c;
+    font-size: 30px;
+    padding-right: 25%;
+    padding-left: 25%;
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+.fa-circle-check {
+    color: #f6db9a;
+}
+
+.homeContainer2 {
+    color: #245a5c;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.homeContainer2Title {
+    font-weight: bold;
+}
+
+.homeContainer2Title h3 {
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+.homeContainer2Content {
+    font-size: 20px;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 12px;
+    }
+}
+
+.homeContainer2Content-child {
+    margin-top: 3%;
+}
+
+.vinaglowTitle,
+.aboutUsTitle {
+    color: #245a5c;
+    font-weight: bold;
+}
+
+.activity-field {
+    @media (max-width: 767px) {
+        font-size: 15px;
+    }
+}
+
+.vinaglowTitle {
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+
+.descriptionMaster {
+    font-size: 20px;
+}
+
+.bgImage {
+    display: flex;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: -3%;
+    height: 155%;
+    width: 67%;
+    z-index: -1;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 75%;
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.productHome {
+    background-color: #e8e1ce;
+    border-radius: 15px;
+    color: #3a7d88;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 2%;
+    width: 22%;
+}
+
+.homeImage1 {
+    height: 100%;
+
+    @media (max-width: 767px) {
+        height: 50%;
+    }
+}
+
+.homeMediumFrame0,
+.homeMediumFrame1,
+.homeMediumFrame2 {
+    @media (max-width: 767px) {
+        max-width: 33%;
+    }
+}
+
+.homeMediumFrame1 {
+    position: relative;
+    margin-left: -3%;
+    overflow: hidden;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 20%;
+    }
+
+    @media (max-width: 767px) {
+        margin-left: 0%;
+    }
+}
+
+.homeMediumFrame0 {
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 50%;
+    }
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    /* Tạo hiệu ứng mượt */
+}
+
+.homeImage3 {
+    border-radius: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    /* Hiệu ứng thu nhỏ */
+}
+
+.text-overlay {
+    position: absolute;
+    top: -100%;
+    left: 6%;
+    right: 0;
+    padding: 10px;
+    opacity: 0;
+    /* Ẩn text mặc định */
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 75%;
+    }
+}
+
+.text-overlay-1 {
+    left: 15%;
+}
+
+.image-wrapper:hover img {
+    transform: scale(0.9) translateY(20%);
+    /* Thu nhỏ và trượt lên */
+}
+
+.image-wrapper:hover .text-overlay {
+    opacity: 1;
+    /* Hiển thị text */
+    transform: translateY(0);
+    top: 0;
+}
+
+.homeMediumFrame2 {
+    position: relative;
+    overflow: hidden;
+    margin-left: -2%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 30%;
+    }
+}
+
+.homeMediumFrame1 div {
+    width: 80%;
+}
+
+.homeMediumFrame1 span {
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+.image-container1 {
+    background-image: url('../../MockupData/Image/Artboard3.png');
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+}
+
+.image-container1 {
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 100%;
+    }
+}
+
+.image-container1 div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 27%;
+    left: 6%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        top: 22%;
+        left: 7%;
+    }
+}
+
+.image-container2 {
+    background-image: url('../../MockupData/Image/Artboard4.png');
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+}
+
+.image-container2 div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 27%;
+    left: 55%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        top: 22%;
+        left: 64%;
+    }
+}
+
+.image-container1,
+.image-container2 {
+    @media (min-width: 768px) and (max-width: 1366px) {
+        background-size: contain;
+        font-size: 12px;
+    }
+}
+
+.masterImage1 {
+    margin-top: 4%;
+}
+
+.productDes {
+    color: #245a5c;
+}
+
+.product-image,
+.information-container-1 {
+    cursor: pointer;
+    width: 100%;
+}
+
+.information-image-1,
+.information-des {
+    width: 100%;
+}
+
+.information-image-1,
+.information-image-2 {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.information-des {
+    padding-left: 2%;
+}
+
+.productName {
+    padding-left: 7%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.seemore {
+    cursor: pointer;
+    color: #245a5c;
+    float: right;
+    padding-right: 1%;
+}
+
+.bottomInformation-right {
+    margin-top: 2.2%;
+}
+
+.home-medium1-image {
+    height: 100%;
+    width: 80%;
+
+    border-radius: 35px;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transition: transform 0.5s ease-in-out;
+    /* Hiệu ứng thu nhỏ */
+
+    @media (max-width: 767px) {
+        height: 100%;
+    }
+}
+
+.home-medium1-image2 {
+    height: 100%;
+    width: 68%;
+    border-radius: 35px;
+    top: 0;
+    left: 10%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-overlay-3 {
+    left: 3%;
+    width: 60%;
+}
+
+.information-left {
+    margin-left: 5%;
+
+    @media (max-width: 767px) {
+        margin-left: 0%;
+    }
+}
+
+.information-image-2 {
+    margin-top: 1%;
+    height: 81%;
+    width: 93%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 74%;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-fluid .mainContent>* {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.container-fluid .mainContent h1 {
+    animation-delay: 0.2s;
+}
+
+.container-fluid .mainContent p {
+    animation-delay: 0.4s;
+}
+
+.container-fluid .mainContent .readMoreButton {
+    animation-delay: 0.6s;
+}
+
+.container-fluid .mainContent .homeMainSlideText {
+    animation-delay: 0.8s;
+}
+
+.container-fluid .mainContent .bottomMainSlide {
+    animation-delay: 0.9s;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.homeContainer2Content-child,
+.homeContainer2Title,
+.homeImage1 {
+    opacity: 0;
+    /* Ẩn mặc định */
+    transform: translateY(30px);
+    transition: all 1.6s ease;
+}
+
+.homeContainer2.visible .homeContainer2Title,
+.homeContainer2.visible .homeContainer2Content-child,
+.homeContainer2.visible .homeImage1 {
+    opacity: 1;
+    /* Hiển thị */
+    transform: translateY(0);
+}
+
+.home-container-medium {
+    @media (max-width: 767px) {
+        max-width: 40%;
+    }
+}
+
+.home-medium-image-container-1 {
+    @media (max-width: 767px) {
+        max-width: 50%;
+    }
+}
+
+.information-right {
+    cursor: pointer;
+}

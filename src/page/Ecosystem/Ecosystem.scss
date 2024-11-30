@@ -1,0 +1,389 @@
+.mainContent-ecosystem {
+    background-image: url('../../MockupData/Image/ecosystem1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    margin-top: 4%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: 8%;
+    }
+
+    @media (max-width: 767px) {
+        background-size: cover;
+        margin-top: 20%;
+    }
+}
+
+.ecosystem-container-1 {
+    color: #245a5c;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        padding-top: 4%;
+    }
+}
+
+.bottomMainSlide-ecosystem {
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(145, 142, 135, 0.9);
+    color: #245a5c;
+    margin: 0 auto;
+    width: 15%;
+    padding: 1% 0% 1% 0%;
+    margin-top: 10%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        width: 20%;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 10px;
+        width: 35%;
+    }
+}
+
+.ecosystem-intro {
+    width: 100%;
+}
+
+.footer-ecosystem-intro {
+    background-image: url('../../MockupData/Image/Vector_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -10%;
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-bottom: 2%;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (max-width: 767px) {
+        margin-top: -15%;
+        padding-top: 10%;
+        padding-bottom: 20%;
+    }
+}
+
+.ecosystem-intro-image {
+    cursor: pointer;
+    width: 100%;
+}
+
+.ecosystem-intro-image-container {
+    width: 100%;
+}
+
+.ecosystem-intro-title {
+    font-weight: bold;
+    font-size: 30px;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+
+.ecosystem-intro-head-content {
+    margin-top: 2%;
+}
+
+.ecosystem-intro-detail {
+    @media (max-width: 767px) {
+        font-size: 15px;
+    }
+}
+
+.ecosystem-intro-title-detail {
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.ecosystem-intro-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+        max-width: 50%;
+    }
+}
+
+
+.formation-history {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ecosystem-intro-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+        max-width: 50%;
+    }
+}
+
+.ecosystem-intro-image1-container {
+    margin-top: 5%;
+}
+
+.ecosystem-container {
+    color: #245a5c;
+    padding-bottom: 2%;
+}
+
+.ecosystem-container-2 {
+    color: #245a5c;
+    font-weight: bold;
+}
+
+.ecosystem-container-3 {
+    color: #245a5c;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    @media (max-width: 767px) {
+        padding-top: 10%;
+    }
+}
+
+.formation-history-des {
+    margin-top: 1%;
+}
+
+.time-history {
+    font-size: 25px;
+}
+
+.time-history-container {
+    text-align: center;
+}
+
+.custom-line-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa nội dung */
+    align-items: center;
+    /* Điều chỉnh khoảng cách với nội dung phía trên */
+}
+
+.custom-line {
+    width: 90%;
+    /* Chiều rộng đường kẻ ngang */
+    height: 2px;
+    /* Độ dày của đường kẻ */
+    background-color: #245a5c;
+    /* Màu sắc */
+    margin: 0 auto;
+    /* Đảm bảo căn giữa */
+}
+
+.time-history-container-bottom {
+    padding-left: 7%;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+}
+
+.time-history-container-bottom ul {
+    width: 90%;
+
+    @media (max-width: 767px) {
+        text-align: left;
+    }
+}
+
+.time-history-container-bottom img {
+    width: 90%;
+}
+
+.bottom-logo-ecosystem-container-1 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-logo-container-ecosystem {
+    background-color: #245a5c;
+    border-radius: 50%;
+    width: 25%;
+    /* Tỷ lệ phần trăm chiều rộng của phần tử cha */
+    aspect-ratio: 1;
+    /* Giữ tỷ lệ 1:1 (hình vuông, tròn khi có border-radius) */
+    margin: 0 auto;
+}
+
+.bottom-logo-container-ecosystem-small {
+    background-color: #245a5c;
+    border-radius: 50%;
+    width: 20%;
+    /* Tỷ lệ phần trăm chiều rộng của phần tử cha */
+    aspect-ratio: 1;
+    /* Giữ tỷ lệ 1:1 (hình vuông, tròn khi có border-radius) */
+    margin: 0 auto;
+}
+
+.arrow-logo {
+    width: 10%;
+}
+
+.arrow-logo img {
+    transform: rotate(-90deg);
+    margin-left: -30%;
+    width: 150%;
+}
+
+.arrow-logo-2 {
+    width: 10%;
+}
+
+.arrow-logo-2 img {
+    transform: rotate(90deg);
+    margin-left: -20%;
+    width: 150%;
+}
+
+.arrow-logo-3 img {
+    transform: rotate(-135deg);
+    margin-top: -900%;
+    margin-left: -350%;
+    width: 510%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: -500%;
+        margin-left: -200%;
+        width: 290%
+    }
+
+
+    @media (max-width: 767px) {
+        margin-top: -220%;
+        margin-left: -90%;
+        width: 110%
+    }
+}
+
+.bottom-logo-container-ecosystem-small-2 {
+    background-color: #245a5c;
+    border-radius: 50%;
+    width: 20%;
+    /* Tỷ lệ phần trăm chiều rộng của phần tử cha */
+    aspect-ratio: 1;
+    /* Giữ tỷ lệ 1:1 (hình vuông, tròn khi có border-radius) */
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-top: -5%;
+}
+
+
+.bottom-logo-ecosystem-container-2 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-logo-container-ecosystem-small-3 {
+    background-color: #245a5c;
+    border-radius: 50%;
+    width: 20%;
+    /* Tỷ lệ phần trăm chiều rộng của phần tử cha */
+    aspect-ratio: 1;
+    /* Giữ tỷ lệ 1:1 (hình vuông, tròn khi có border-radius) */
+    margin: 0 auto;
+    margin-left: 0%;
+    margin-top: 10%;
+
+    @media (max-width: 767px) {
+        margin-left: -12%;
+        margin-top: 10%;
+    }
+}
+
+.arrow-logo-4 {
+    width: 10%;
+}
+
+.arrow-logo-4 img {
+    transform: rotate(180deg);
+    margin-left: -20%;
+    margin-top: -11%;
+    position: absolute;
+    width: 15%;
+
+    @media (max-width: 767px) {
+        margin-left: -22%;
+        margin-top: -11%;
+    }
+}
+
+.bottom-logo-container-ecosystem-small-4 {
+    background-color: #245a5c;
+    border-radius: 50%;
+    width: 20%;
+    /* Tỷ lệ phần trăm chiều rộng của phần tử cha */
+    aspect-ratio: 1;
+    /* Giữ tỷ lệ 1:1 (hình vuông, tròn khi có border-radius) */
+    margin: 0 auto;
+    margin-left: -15%;
+    margin-top: -6%;
+
+    @media (max-width: 767px) {
+        margin-left: -20%;
+        margin-top: -6%;
+    }
+}
+
+.arrow-logo-5 {
+    width: 10%;
+}
+
+.arrow-logo-5 img {
+    transform: rotate(135deg);
+    margin-left: -15%;
+    margin-top: -16%;
+    position: absolute;
+    width: 13%;
+}
+
+.ecosystem-general-title {
+    color: #245a5c;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-ecosystem-intro {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}

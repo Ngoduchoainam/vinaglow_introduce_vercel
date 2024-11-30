@@ -3,6 +3,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import React from "react";
 import HomePage from "./page/home/Home.tsx";
+import AboutUs from "./page/AboutUs/AboutUs.tsx";
+import Ecosystem from "./page/Ecosystem/Ecosystem.tsx";
+import News from "./page/News/News.tsx";
+import NewsDetail from "./page/NewsDetail/NewsDetail.tsx";
+import Recruitment from "./page/Recruitment/Recruitment.tsx";
+import Contact from "./page/Contact/Contact.tsx";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +56,30 @@ function App() {
         {
           path: "/",
           element: <HomePage />,
+        },
+        {
+          path: "/ve-chung-toi",
+          element: <AboutUs />,
+        },
+        {
+          path: "/he-sinh-thai",
+          element: <Ecosystem />,
+        },
+        {
+          path: "/tin-tuc",
+          element: <News />,
+        },
+        {
+          path: "/tin-tuc-chi-tiet",
+          element: <NewsDetail />,
+        },
+        {
+          path: "/tuyen-dung",
+          element: <Recruitment />,
+        },
+        {
+          path: "/lien-he",
+          element: <Contact />,
         }
       ],
     },
