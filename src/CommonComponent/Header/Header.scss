@@ -21,7 +21,7 @@
     font-size: 16px;
 
     @media (min-width: 768px) and (max-width: 1366px) {
-        height: 4vh;
+        height: 3vh;
     }
 }
 
@@ -31,7 +31,8 @@
 
 .searchContainer-header {
     @media (min-width: 768px) and (max-width: 1366px) {
-        width: 10% !important;
+        margin-left: 5%;
+        width: 8% !important;
     }
 
     @media (max-width: 767px) {
@@ -51,4 +52,17 @@
 
 #basic-navbar-nav {
     color: #3f6e71;
+}
+
+.header-frame {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.search-head {
+    margin-top: 0% !important;
+}
+
+.fa-magnifying-glass {
+    font-size: 22px;
 }

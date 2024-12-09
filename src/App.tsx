@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import React from "react";
 import HomePage from "./page/home/Home.tsx";
 import AboutUs from "./page/AboutUs/AboutUs.tsx";
@@ -9,40 +9,46 @@ import News from "./page/News/News.tsx";
 import NewsDetail from "./page/NewsDetail/NewsDetail.tsx";
 import Recruitment from "./page/Recruitment/Recruitment.tsx";
 import Contact from "./page/Contact/Contact.tsx";
+import RecruimentDetail from "./page/RecruimentDetail/RecruimentDetail.tsx";
+import ApiProtocol from "./api/ApiProtocol.ts";
+import ApiUrl from "./api/ApiUrl.ts";
+import { ConfigObject } from "./Entities/ConfigObject.ts";
+import { ConfigObjectContext } from "./ConfigObjectContext.tsx";
 
 const queryClient = new QueryClient();
 
 function App() {
   const Layout = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
+    const [obj, setObj] = useState(new ConfigObject());
 
-    // Toggle visibility of the arrow button when scrolling
-    useEffect(() => {
-      const toggleVisibility = () => {
-        if (window.scrollY > window.innerHeight) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
+    const GetConfig = async () => {
+      try {
+        let res = await ApiProtocol.callAPI(ApiUrl.GetConfig, undefined, "GET");
+
+        if (res) {
+          let result = await res?.json();
+          let obj = result.data;
+
+          setObj(obj);
+
         }
-      };
+      } catch (error) {
 
-      window.addEventListener("scroll", toggleVisibility);
-      return () => window.removeEventListener("scroll", toggleVisibility);
+      }
+    }
+
+    useEffect(() => {
+      GetConfig()
     }, []);
 
-    // Scroll the page to the top when arrow is clicked
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
 
     return (
       <div>
         <QueryClientProvider client={queryClient}>
-          <Outlet />
+          <ConfigObjectContext.Provider value={obj}>
+            <Outlet />
+          </ConfigObjectContext.Provider>
         </QueryClientProvider>
       </div>
     );
@@ -70,7 +76,7 @@ function App() {
           element: <News />,
         },
         {
-          path: "/tin-tuc-chi-tiet",
+          path: "/tin-tuc-chi-tiet/:url",
           element: <NewsDetail />,
         },
         {
@@ -80,7 +86,11 @@ function App() {
         {
           path: "/lien-he",
           element: <Contact />,
-        }
+        },
+        {
+          path: "/chi-tiet-tuyen-dung/:url",
+          element: <RecruimentDetail />,
+        },
       ],
     },
   ]);

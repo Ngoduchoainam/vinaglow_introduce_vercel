@@ -5,7 +5,8 @@
     // background-position: center;
     font-size: 18px;
     padding-top: 6%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
+    padding-left: 10%;
     color: white;
     width: 100%;
     z-index: 1;
@@ -13,6 +14,7 @@
     @media (min-width: 768px) and (max-width: 1366px) {
         font-size: 14px;
         padding-top: 8%;
+        padding-bottom: 0%;
     }
 
     @media (max-width: 767px) {
@@ -20,10 +22,14 @@
         margin-top: 10%;
         padding-top: 20%;
         padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
 .head-footer-container {
+    padding-left: 10%;
+
     @media (max-width: 767px) {
         padding-left: 5%;
         padding-right: 5%;
@@ -60,8 +66,13 @@
 }
 
 .footerLogo {
-    margin-left: -20%;
-    margin-top: -7%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 60%;
+    }
 
     @media (max-width: 767px) {
         margin: 0 auto;
@@ -92,10 +103,13 @@
 }
 
 .contact-infor-index {
-    margin-top: 9.5%;
+    cursor: pointer;
+    margin-top: 8%;
 }
 
 .contact-infor-index2 {
+    display: flex;
+    flex-direction: row;
     margin-top: 3%;
 }
 
@@ -107,6 +121,8 @@
 }
 
 .index-2 {
+    display: flex;
+    flex-direction: row;
     padding-right: 12%;
 }
 
@@ -175,21 +191,50 @@
 }
 
 .infor-contact-container {
+    margin-top: 11%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: 20%;
+    }
+
     @media (max-width: 767px) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 2%;
     }
 }
 
 .contact-infor-index-first {
+    cursor: pointer;
+
     @media (max-width: 767px) {
         margin-top: 10px;
     }
 }
 
 .right-left-information {
+    margin-top: 5%;
+
     @media (max-width: 767px) {
         margin-top: 5%;
     }
+}
+
+.company-contact {
+    padding-left: 5%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        padding-left: 5%;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 5%;
+    }
+}
+
+.fa-paper-plane {
+    color: white;
+    font-size: 22px;
+    margin-left: 5%;
 }

@@ -8,8 +8,6 @@
     justify-content: space-between;
     color: #245a5c;
     height: 90%;
-    text-align: center;
-    align-items: center;
     width: 100%;
 }
 
@@ -21,21 +19,88 @@
 }
 
 .contact-input-cv {
-    background-color: #e8e1ce;
     border-radius: 20px;
-    border: none;
     padding-left: 10%;
     margin-top: 2%;
     height: 25%;
-    width: 100%;
+    width: 95%;
+}
+
+.uploadCV-button {
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .uploadCV {
-    background-color: #245a5c;
+    background-color: #f0b734;
+    border: none;
+    border-radius: 30px;
     color: white;
+    width: 45%;
 
     &:hover {
         background-color: #245a5c;
         color: white;
+    }
+}
+
+.cancelCV {
+    background-color: white;
+    border-color: gray;
+    border-radius: 30px;
+    color: #245a5c;
+    font-weight: bold;
+    width: 45%;
+
+    &:hover {
+        background-color: #245a5c;
+        color: white;
+    }
+}
+
+.custom-file-label {
+    border-radius: 20px;
+    border: 2px solid #000;
+    color: gray;
+    padding-left: 10%;
+    padding-top: 2%;
+    margin-top: 2%;
+    height: 25%;
+    width: 95%;
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+.register-button {
+    border-radius: 30px;
+    background-color: #f0b734;
+    border: none;
+    color: #245a5c;
+    font-weight: bold;
+    width: 35%;
+
+    &:hover {
+        background-color: #245a5c;
+        color: white;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        font-size: 18px;
+        width: 40%;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        width: 50%;
     }
 }

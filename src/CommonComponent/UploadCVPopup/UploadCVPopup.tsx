@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Box, Modal } from "@mui/material";
+import { Box, Modal, Alert, Stack } from "@mui/material";
 import "./UploadCVPopup.scss";
 import { Col, Row, Button } from "react-bootstrap";
+import ApiProtocol from "../../api/ApiProtocol.ts";
+import ApiUrl from "../../api/ApiUrl.ts";
+
 
 const style = {
+  borderRadius: "30px",
   position: "absolute" as "absolute",
   top: "50%",
   left: "50%",
@@ -16,7 +20,6 @@ const style = {
   },
   height: "40%",
   bgcolor: "background.paper",
-  border: "2px solid #000",
   p: 4,
 };
 
@@ -24,119 +27,66 @@ const buttonStyle = {
   cursor: "pointer"
 }
 
-interface PickedImage {
-  id?: number;
-  fileUrl?: string;
+interface CV_Send {
+  FullName?: string;
+  Message?: string;
+  URL_CV?: string;
 }
 
 const UploadCVPopup = (props: any) => {
-  const [open, setOpen] = React.useState(false);
-  const [serverImage, setServerImage] = useState([]);
-  const [lstPickedImage, setLstPickedImage] = useState<Array<PickedImage>>([]);
-  const [images, setImages] = useState([] as any);
-  const [lstBg, SetLstBg] = useState(['']);
-  const divRef = useRef<HTMLDivElement>(null);
-  const [pageIndex, setPageIndex] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [message, setMessage] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [alertSendCV, setAlertSendCV] = useState<string | null>(null);
+
 
   const handleOpen = () => {
     setOpen(true);
   };
+
   const handleClose = () => setOpen(false);
 
-  const GetImageFromServer = async (loading?: boolean, imageNameFilter?: string, resetResult?: boolean) => {
-    setLoading(loading!)
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = event.target.files?.[0] || null;
+    setFile(selectedFile);
+  };
+
+  const handleSubmit = async () => {
     try {
-      let pageIndexLoad = resetResult ? 1 : loading ? pageIndex + 1 : pageIndex;
-      setPageIndex(pageIndexLoad);
+      if (!file) {
+        setAlertSendCV("Vui lòng chọn một file.");
+        setTimeout(() => setAlertSendCV(null), 3000);
+        return;
+      }
 
-      setLoading(false);
+      // Chuẩn bị dữ liệu
+      const formData = new FormData();
+      formData.append("FullName", fullName || "Test");
+      formData.append("Message", message || "Test");
+      formData.append("FileCV", file);
+
+      // Gửi request đến API
+      const response = await ApiProtocol.callAPIImage(
+        ApiUrl.SendContact,
+        formData,
+        "POST"
+      );
+
+      setAlertSendCV("Gửi liên hệ thành công!");
+      handleClose();
     } catch (error) {
-      console.log(35, error)
+      console.error("Error uploading file:", error);
+      alert("Đã xảy ra lỗi khi tải lên.");
     }
-  }
 
-  useEffect(() => {
-    GetImageFromServer();
-
-  }, []);
-
-  const rows = [];
-  for (let i = 0; i < serverImage.length; i += 3) {
-  }
-
-  const AddImage = (img: PickedImage, image?: never) => {
-    let arr = [...lstPickedImage];
-    console.log(83, lstPickedImage, img)
-    let lstFilter = arr.filter(element => element.id == img.id);
-    if (lstFilter.length == 0) {
-      arr.push(img);
-      setLstPickedImage(arr);
-
-      let index = serverImage.indexOf(image!);
-
-      let lstBgNew = [...lstBg];
-      lstBgNew[index] = "#245a5c";
-      SetLstBg(lstBgNew);
-    }
-  }
-
-  const AddNewImage = () => {
-    try {
-      images.forEach((element: any) => {
-        let formData = new FormData();
-        formData.append('file', element);
-      });
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  useEffect(() => {
-    if (images.length < 1) return;
-    const newImageUrls: any = [];
-
-    images.forEach((image: any) => {
-      let item = new Image();
-
-      newImageUrls.push(item);
-    });
-
-
-    AddNewImage();
-
-  }, [images]);
-
-  const HandlePickedImages = async () => {
-    await props.SetLstPickedImage(lstPickedImage, props.type);
-
-    let arr = [...lstPickedImage];
-    arr = [];
-    setLstPickedImage(arr);
-    SetLstBg(Array(serverImage.length).fill("white"));
-    handleClose();
-  }
-
-  const handleDivClick = (event: any) => {
-    if (divRef.current && event.target.tagName !== divRef.current.querySelector('img')!.tagName) {
-      console.log('Div clicked, but not the image');
-
-      SetLstBg(Array(serverImage.length).fill("white"));
-
-      let arr = [...lstPickedImage];
-      arr = [];
-      setLstPickedImage(arr);
-    }
+    setTimeout(() => setAlertSendCV(null), 3000);
   };
 
   return (
     <>
-      <span
-        onClick={handleOpen}
-        style={buttonStyle}
-      >
-        tại đây
-      </span>
+      <Button variant="primary" size="lg" onClick={handleOpen}
+        style={buttonStyle} className="register-button">Đăng ký ngay</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -149,25 +99,23 @@ const UploadCVPopup = (props: any) => {
             <Row className="justify-content-center" style={{ height: "100%" }}>
               <Col md={5} className="upload-cv-container">
                 <div className="title">
-                  Gửi CV cho chúng tôi
+                  Tải CV của bạn lên
                 </div>
 
                 <div className="contact-input-cv-content">
                   <input className="contact-input-cv" placeholder="Họ tên" />
 
-                  <input className="contact-input-cv" placeholder="Email" />
+                  <input className="contact-input-cv" placeholder="Vị trí ứng tuyển" />
 
-                  <input
-                    type="file"
-                    multiple
-                    accept="image/*"
-                    onChange={(e) => {
-                      setImages([...images, ...e.target.files!]);
-                    }}
-                  />
+                  <label htmlFor="fileInput" className="custom-file-label">
+                    {file ? file.name : "CV của bạn"}
+                  </label>
+
+                  <input className="contact-input-cv hidden-file-input" type="file" placeholder="CV của bạn" id="fileInput" onChange={handleFileChange} />
                 </div>
-                <div>
-                  <Button variant="primary" size="lg" className="uploadCV">Gửi CV</Button>
+                <div className="uploadCV-button">
+                  <Button variant="primary" size="lg" className="cancelCV" onClick={handleClose}>Cancel</Button>
+                  <Button variant="primary" size="lg" className="uploadCV" onClick={handleSubmit}>OK</Button>
                 </div>
               </Col>
 
@@ -176,6 +124,25 @@ const UploadCVPopup = (props: any) => {
 
         </Box>
       </Modal>
+      <div
+        style={{
+          position: "fixed",
+          top: "10px",
+          right: "10px",
+          zIndex: 1000,
+        }}
+      >
+        {alertSendCV && (
+          <Stack spacing={2}>
+            <Alert
+              severity={alertSendCV === "Gửi liên hệ thành công!" ? "success" : "error"}
+              onClose={() => setAlertSendCV(null)}
+            >
+              {alertSendCV}
+            </Alert>
+          </Stack>
+        )}
+      </div>
     </>
   );
 };

@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: rgba(179, 173, 161, 0.85);
+    background-color: rgba(179, 173, 161, 0);
     color: #245a5c;
     margin: 0 auto;
     width: 15%;
@@ -144,7 +144,7 @@
     }
 }
 
-.recruiment-head-title span {
+.rec-head-title {
     @media (max-width: 767px) {
         font-size: 17px;
     }
@@ -154,7 +154,7 @@
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
     @media (max-width: 767px) {
@@ -174,7 +174,7 @@
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 }
 
@@ -211,4 +211,42 @@
     /* Hiển thị */
     transform: translateY(0);
     animation: slideIn 1s ease-out;
+}
+
+.rec-head-title {
+    font-size: 24px;
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+.rec-container-1 {
+    color: #245a5c;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        padding-bottom: 0%;
+    }
+}
+
+.bgImage-recruiment {
+    display: flex;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 2%;
+    height: 180%;
+    width: 67%;
+    z-index: -1;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 95%;
+        margin-left: 9%;
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 }

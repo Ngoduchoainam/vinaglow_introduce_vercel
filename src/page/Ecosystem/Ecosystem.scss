@@ -18,19 +18,14 @@
 
 .ecosystem-container-1 {
     color: #245a5c;
-    padding-top: 2%;
     padding-bottom: 2%;
-
-    @media (min-width: 768px) and (max-width: 1366px) {
-        padding-top: 4%;
-    }
 }
 
 .bottomMainSlide-ecosystem {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: rgba(145, 142, 135, 0.9);
+    background-color: rgba(145, 142, 135, 0);
     color: #245a5c;
     margin: 0 auto;
     width: 15%;
@@ -88,7 +83,7 @@
     }
 
     @media (max-width: 767px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -122,6 +117,10 @@
 .formation-history {
     font-size: 25px;
     font-weight: bold;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
 }
 
 .ecosystem-intro-left-container {
@@ -141,6 +140,10 @@
 .ecosystem-container {
     color: #245a5c;
     padding-bottom: 2%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: 2%;
+    }
 }
 
 .ecosystem-container-2 {
@@ -194,6 +197,7 @@
     padding-left: 7%;
 
     @media (max-width: 767px) {
+        margin-top: 1%;
         text-align: center;
     }
 }
@@ -202,6 +206,7 @@
     width: 90%;
 
     @media (max-width: 767px) {
+        margin-top: 3%;
         text-align: left;
     }
 }
@@ -386,4 +391,31 @@
 .footer-ecosystem-intro {
     opacity: 0;
     animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.bgImage-ecosystem {
+    display: flex;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: -1%;
+    height: 210%;
+    width: 67%;
+    z-index: -1;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 115%;
+        margin-left: 10%;
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.ecosystem-general-container {
+    padding-bottom: 4%;
+
+    @media (max-width: 767px) {
+        padding-bottom: 0%;
+    }
 }

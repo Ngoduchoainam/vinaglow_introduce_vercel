@@ -1,5 +1,5 @@
 .mainContent-news {
-    background-image: url('../../MockupData/Image/news_1.png');
+    // background-image: url('../../MockupData/Image/news_1.png');
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 4%;
@@ -13,12 +13,17 @@
     @media (max-width: 767px) {
         margin-top: 20%;
     }
-
 }
 
 .news-container-1 {
     color: #245a5c;
     padding-top: 3%;
+    cursor: pointer;
+}
+
+.news-container-head {
+    padding-top: 4%;
+    color: #245a5c;
     cursor: pointer;
 }
 
@@ -28,6 +33,10 @@
 
 .news-head-title {
     font-size: 24px;
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
 }
 
 .news-button-group-container {
@@ -67,6 +76,7 @@
 
 .news-image-2 {
     transition: transform 0.3s ease-in-out;
+    border-radius: 30px;
     width: 100%;
 
     @media (max-width: 767px) {
@@ -74,8 +84,12 @@
     }
 
     &:hover {
-        transform: scale(1.04);
+        transform: scale(1.03);
     }
+}
+
+.card-title {
+    height: 60%;
 }
 
 .title-news-banner {
@@ -100,12 +114,22 @@
     }
 }
 
+.news-card {
+    color: #245a5c;
+    background-color: #e8e1ce;
+    border-radius: 30px;
+    height: 95%;
+}
+
 .news-image-detail {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    height: 100%;
     width: 100%;
 
     &:hover {
-        transform: scale(1.04);
+        transform: scale(1.03);
         border-radius: 30px;
     }
 }
@@ -153,6 +177,7 @@
     padding-top: 4%;
     padding-left: 6%;
     padding-bottom: 3%;
+    height: 30%;
 }
 
 .news-detail-des-2 {
@@ -214,4 +239,38 @@
     to {
         opacity: 1;
     }
+}
+
+.news-container-navigate {
+    padding-top: 2%;
+    color: #245a5c;
+}
+
+.bgImage-news {
+    display: flex;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 0%;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        height: 95%;
+        margin-left: 4%;
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.navigate-news-detail {
+    padding-bottom: 1%;
+}
+
+.news-detail {
+    padding-left: 7%;
+    padding-right: 10%;
+    margin-top: 7%;
 }

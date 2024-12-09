@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: rgba(145, 142, 135, 0.9);
+    background-color: rgba(145, 142, 135, 0);
     color: #245a5c;
     margin: 0 auto;
     width: 15%;
@@ -53,10 +53,6 @@
 }
 
 .brand-story {
-    opacity: 0;
-}
-
-.brand-story.visible {
     background-color: #245a5c;
     color: white;
     border-top-left-radius: 20px;
@@ -66,7 +62,6 @@
     height: 90%;
     width: 50%;
     opacity: 1;
-    transform: translateY(0);
 
     @media (min-width: 768px) and (max-width: 1366px) {
         padding-bottom: 10%;
@@ -88,14 +83,9 @@
 }
 
 .aboutUs-image1-container {
-    opacity: 0;
-}
-
-.aboutUs-image1-container.visible {
     height: 90%;
     width: 50%;
     opacity: 1;
-    transform: translateX(0);
 }
 
 @keyframes slideInFromRight {
@@ -314,11 +304,17 @@
 }
 
 .about-us-medium-3-content {
+    font-size: 18px;
     width: 80%;
+
+    @media (max-width: 767px) {
+        font-size: 15px;
+    }
 }
 
 .bottom-image-aboutU-container {
-    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .bottom-image-aboutUs {
@@ -339,12 +335,15 @@
 
 .aboutUs-container-1 {
     color: #245a5c;
-    padding-top: 3%;
     padding-bottom: 2%;
 }
 
 .aboutUs-container-3 {
     color: #245a5c;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+        margin-top: 2%;
+    }
 
     @media (max-width: 767px) {
         padding-top: 5%;
@@ -437,7 +436,7 @@
 
 /* Hover effect for scaling and shadow */
 .bottom-aboutUs-container:hover .bottom-image-aboutUs {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Animation for fade-in */
@@ -458,4 +457,8 @@
 
 .about-us-medium-container-frame.visible .col-md-5 {
     transform: scale(1) rotate(360deg);
+}
+
+.about-us-des {
+    font-size: 18px;
 }
